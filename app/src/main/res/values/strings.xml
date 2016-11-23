@@ -1,0 +1,27 @@
+<resources>
+    <!--App name-->
+    <string name="app_name">The Solar System</string>
+
+    <!--Menu item names-->
+    <string name="action_settings">Settings</string>
+
+    <!--Drawer accessibility strings-->
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!--Activity labels-->
+    <string name="title_activity_detail">Details</string>
+    <string name="title_activity_quiz">Quiz</string>
+    <string name="button_submit">Submit</string>
+    <string name="results_text">Results</string>
+    <string name="btn_retry">Retry</string>
+
+    <!--Quiz feedback-->
+    <string name="great">Great Job! Keep it up!</string>
+    <string name="good">Good Job! Try to get all 3 correct next time.</string>
+    <string name="ok">You can do better!</string>
+    <string name="bad">Study hard and try again :)</string>
+    <string name="headingImages">Image Gallery</string>
+
+    <string name="title_activity_image">ImageActivity</string>
+</resources>

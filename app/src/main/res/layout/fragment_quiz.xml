@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_quiz_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The Sun"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/white"
+        android:background="@color/quizActivityBlue"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@dimen/small_margin"
+        android:paddingBottom="@dimen/fab_margin"
+        android:gravity="center"/>
+
+    <!--The layout that includes multiple choice question and options-->
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_below="@+id/tv_quiz_title"
+        android:id="@+id/questions_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_submit"
+        tools:context="com.hammad.solarsystem.app.QuizActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/fab_margin">
+
+            <!--Question 1-->
+            <TextView
+                android:id="@+id/question_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_medium"/>
+
+            <!--The four choices to select from-->
+            <RadioGroup
+                android:id="@+id/q1_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/RadioGroupStyle">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/q1_option_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/q1_option_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/q1_option_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/q1_option_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <!--Question 2-->
+            <TextView
+                android:id="@+id/question_2"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:textSize="@dimen/text_size_medium"/>
+
+            <!--The four choices to select from-->
+            <RadioGroup
+                android:id="@+id/q2_options"
+                style="@style/RadioGroupStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/q2_option_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/q2_option_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/q2_option_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/q2_option_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+            <!--Question 3-->
+            <TextView
+                android:id="@+id/question_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:textSize="@dimen/text_size_medium"
+                android:textColor="@color/black"/>
+
+            <!--The four choices to select from-->
+            <RadioGroup
+                android:id="@+id/q3_options"
+                style="@style/RadioGroupStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/q3_option_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/q3_option_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/q3_option_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/q3_option_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_submit"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/quizActivityBlue"
+        android:paddingBottom="@dimen/medium_padding"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/results_layout"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="@color/quizActivityBlue"
+        android:padding="@dimen/fab_margin"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:text="@string/results_text"
+            android:fontFamily="sans-serif"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:id="@+id/tv_total_score"
+            android:gravity="center"
+            android:background="@drawable/white_ellipse"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:id="@+id/tv_score_comments"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/white"
+            android:text="This is dummy text, mate!"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_quiz_retry"
+            android:textColor="@color/white"
+            android:text="@string/btn_retry"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="darkGray">#0F0F0F</color>
+    <color name="black">#000000</color>
+    <color name="lightGray">#2f4f4f</color>
+    <color name="blue">#0000ff</color>
+    <color name="quizActivityBlue">#009FFF</color>
+    <color name="quizActivityDarkBlue">#3F51B5</color>
+    <color name="quizActivityDrawer">#1F75FE</color>
+    <!--<color name="quizActivityAccent"></color>-->
+    <color name="white">#ffffff</color>
+    <color name="actionBarOpacity">#00000000</color>
+    <color name="black_alpha_40">#66000000</color>
+
+    <color name="black_overlay">#66000000</color>
+</resources>
