@@ -201,8 +201,7 @@
             android:id="@+id/tv_score_comments"
             android:textAppearance="?android:textAppearanceSmall"
             android:fontFamily="sans-serif"
-            android:textColor="@color/white"
-            android:text="This is dummy text, mate!"/>
+            android:textColor="@color/white"/>
 
         <Button
             android:layout_width="wrap_content"

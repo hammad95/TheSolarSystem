@@ -20,6 +20,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -97,14 +98,38 @@ public class QuizActivity extends AppCompatActivity {
 
         //Show quiz option in the navigation drawer as selected
         selectItem(1);
+
+        // Get the page number and scroll to that page in the quiz view pager
+        Intent intent = getIntent();
+        int planetNumber = -1;
+        if(intent.hasExtra(Utility.PLANET_NUMBER))
+            planetNumber = intent.getIntExtra(Utility.PLANET_NUMBER, -1);
+        if(planetNumber != -1)
+            mViewPager.setCurrentItem(planetNumber);
     }
+
+//    @Override
+//    protected void onSaveInstanceState(Bundle outState) {
+//        outState.putInt("OPTION", 2);
+//        super.onSaveInstanceState(outState);
+//        Log.d("QuizActivity", "onSaveInstanceState() called");
+//    }
+//
+//    @Override
+//    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+//        super.onRestoreInstanceState(savedInstanceState);
+//        Log.d("QuizActivity", "onRestoreInstanceState() called");
+//        QuizFragment quizFragment = (QuizFragment)
+//                mSectionsPagerAdapter.getItem(mViewPager.getCurrentItem());
+//        quizFragment.setSelectedOption(savedInstanceState.getInt("OPTION", -1));
+//    }
 
     /**
      * A placeholder fragment containing a simple view.
      */
     public static class QuizFragment extends Fragment {
 
-        // The radio buttons representing the options for the MCQs
+        // The text for the radio buttons representing the options for the MCQs
         TextView tvQ1Op1;
         TextView tvQ1Op2;
         TextView tvQ1Op3;
@@ -118,6 +143,9 @@ public class QuizActivity extends AppCompatActivity {
         TextView tvQ3Op3;
         TextView tvQ3Op4;
 
+        RadioGroup q1Options;
+        RadioGroup q2Options;
+        RadioGroup q3Options;
 
         public QuizFragment() {
         }
@@ -158,6 +186,11 @@ public class QuizActivity extends AppCompatActivity {
             tvQ3Op2 = (TextView) rootView.findViewById(R.id.q3_option_2);
             tvQ3Op3 = (TextView) rootView.findViewById(R.id.q3_option_3);
             tvQ3Op4 = (TextView) rootView.findViewById(R.id.q3_option_4);
+
+            // Get the radio groups
+            q1Options = (RadioGroup) rootView.findViewById(R.id.q1_options);
+            q2Options = (RadioGroup) rootView.findViewById(R.id.q2_options);
+            q3Options = (RadioGroup) rootView.findViewById(R.id.q3_options);
 
             // Assign the approprate questions and options to the TextViews based on the planet number
             int planetNumber = getArguments().getInt(Utility.PLANET_NUMBER);
@@ -217,9 +250,6 @@ public class QuizActivity extends AppCompatActivity {
             final View view = getView();
 
             if(null != view) {
-                RadioGroup q1Options = (RadioGroup) getView().findViewById(R.id.q1_options);
-                RadioGroup q2Options = (RadioGroup) getView().findViewById(R.id.q2_options);
-                RadioGroup q3Options = (RadioGroup) getView().findViewById(R.id.q3_options);
 
                 // Check if the correct radio button is selected based on the id of the radio button
                 // inside the quizAnswersArray based on the planet number

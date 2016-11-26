@@ -265,6 +265,8 @@ public class MainActivity extends AppCompatActivity {
         // launch quiz activity if position selected is 1
         if(position == 1) {
             Intent quizActivityIntent = new Intent(this, QuizActivity.class);
+            // Send the page number in with the intent
+            quizActivityIntent.putExtra(Utility.PLANET_NUMBER, mViewPager.getCurrentItem());
             startActivity(quizActivityIntent);
         }
 

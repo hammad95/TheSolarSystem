@@ -35,7 +35,7 @@ public class ThumbnailMakerTask extends AsyncTask<Integer, Void, Bitmap> {
     protected Bitmap doInBackground(Integer[] params) {
 
         data = params[0];
-        return decodeSampledBitmapFromResource(mContext.getResources(), data, 175, 175);
+        return decodeSampledBitmapFromResource(mContext.getResources(), data, 180, 180);
     }
 
     // Once complete, see if ImageView is still around and set bitmap.
