@@ -43,7 +43,10 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_image"
             android:theme="@style/FullscreenTheme">
+        </activity>
 
+        <activity android:name=".AboutActivity"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 

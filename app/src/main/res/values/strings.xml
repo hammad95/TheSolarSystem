@@ -23,5 +23,15 @@
     <string name="bad">Study hard and try again :)</string>
     <string name="headingImages">Image Gallery</string>
 
+    <!--About activity strings-->
     <string name="title_activity_image">ImageActivity</string>
+    <string name="dev_name">Developer: Hammad Khalid</string>
+    <string name="dev_email">h-hk@live.com</string>
+    <string name="about_desc">The content of this app has been made possible by NASA. \n\nFor detailed information on the topics covered in this app, visit</string>
+    <string name="about_desc_link">www.nasa.gov</string>
+    <string name="about_rating">If you enjoyed using this app, please</string>
+    <string name="dev_email_heading">Developer E-mail:</string>
+    <string name="app_version">1.2</string>
+    <string name="app_version_text">Version:</string>
+    <string name="about">About</string>
 </resources>
